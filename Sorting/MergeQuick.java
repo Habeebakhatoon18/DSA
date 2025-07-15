@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class MergeQuick {
@@ -16,7 +15,7 @@ public class MergeQuick {
             quick(a, p + 1, r);
         }
     }
-
+    //helper function to partition the array with correct postion of pivot
     static int sortQuick(int[] a, int l, int r) {
         int i = l, j = r;
         int pv = a[l];
@@ -45,7 +44,7 @@ public class MergeQuick {
             sortMerge(a, l, mid, h);
         }
     }
-
+    //helper function to merge two sorted parts of array
     static void sortMerge(int[] a, int low, int mid, int high) {
         int i = low, j = mid + 1, k = 0;
         int temp[] = new int[high - low + 1];
