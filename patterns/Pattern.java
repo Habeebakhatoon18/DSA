@@ -1,304 +1,335 @@
 public class Pattern {
-  
- public static void print4(int var0) {
-      for(int var1 = 1; var1 <= var0; ++var1) {
-         for(int var2 = 1; var2 <= var1; ++var2) {
-            System.out.print(var1);
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print5(int var0) {
-      for(int var1 = var0; var1 > 0; --var1) {
-         for(int var2 = 0; var2 < var1; ++var2) {
-            System.out.print("*");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print6(int var0) {
-      for(int var1 = 1; var1 <= var0; ++var1) {
-         for(int var2 = 1; var2 <= var0 - var1 + 1; ++var2) {
-            System.out.print(var2);
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print7(int var0) {
-      for(int var1 = 1; var1 <= var0; ++var1) {
-         int var2;
-         for(var2 = 0; var2 < var0 - var1; ++var2) {
-            System.out.print(" ");
-         }
-
-         for(var2 = 1; var2 <= 2 * var1 - 1; ++var2) {
-            System.out.print("*");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print8(int var0) {
-      for(int var1 = 1; var1 <= var0; ++var1) {
-         int var2;
-         for(var2 = 1; var2 < var1; ++var2) {
-            System.out.print(" ");
-         }
-
-         for(var2 = 1; var2 <= 2 * var0 - (2 * var1 - 1); ++var2) {
-            System.out.print("*");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print9(int var0) {
-      print7(var0);
-      print8(var0);
-   }
-
-   public static void print10(int var0) {
-      for(int var1 = 1; var1 <= 2 * var0 - 1; ++var1) {
-         int var2;
-         if (var1 <= var0) {
-            for(var2 = 1; var2 <= var1; ++var2) {
-               System.out.print("*");
-            }
-         } else {
-            for(var2 = 1; var2 <= 2 * var0 - var1; ++var2) {
-               System.out.print("*");
-            }
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print11(int var0) {
-      int var1 = 1;
-
-      for(int var2 = 0; var2 < var0; ++var2) {
-         if (var2 % 2 == 0) {
-            var1 = 1;
-         }
-
-         for(int var3 = 0; var3 <= var2; ++var3) {
-            System.out.print(var1);
-            var1 = 1 - var1;
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print12(int var0) {
-      for(int var1 = 1; var1 <= var0; ++var1) {
-         int var2;
-         for(var2 = 1; var2 <= var1; ++var2) {
-            System.out.print(var2);
-         }
-
-         for(var2 = 0; var2 <= 2 * (var0 - var1); ++var2) {
-            System.out.print(" ");
-         }
-
-         for(var2 = var1; var2 >= 1; --var2) {
-            System.out.print(var2);
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print13(int var0) {
-      int var1 = 1;
-
-      for(int var2 = 0; var2 < var0; ++var2) {
-         for(int var3 = 0; var3 <= var2; ++var3) {
-            int var10001 = var1++;
-            System.out.print("" + var10001 + " ");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print14(int var0) {
-      for(int var1 = 0; var1 < var0; ++var1) {
-         int var2 = 65;
-
-         for(int var3 = 0; var3 <= var1; ++var3) {
-            int var10001 = var2++;
-            System.out.print((char)var10001 + " ");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print15(int var0) {
-      for(int var1 = var0; var1 >= 1; --var1) {
-         int var2 = 65;
-
-         for(int var3 = 0; var3 < var1; ++var3) {
-            int var10001 = var2++;
-            System.out.print((char)var10001 + " ");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print16(int var0) {
-      int var1 = 65;
-
-      for(int var2 = 0; var2 < var0; ++var2) {
-         for(int var3 = 0; var3 <= var2; ++var3) {
-            System.out.print((char)var1 + " ");
-         }
-
-         ++var1;
-         System.out.println();
-      }
-
-   }
-
-   public static void print17(int var0) {
-      for(int var1 = 0; var1 < var0; ++var1) {
-         int var2 = 65;
-
-         int var3;
-         for(var3 = 0; var3 < var0 - var1 - 1; ++var3) {
-            System.out.print("  ");
-         }
-
-         for(var3 = 0; var3 < 2 * var1 + 1; ++var3) {
-            int var10001;
-            if (var3 >= var1) {
-               var10001 = var2--;
-               System.out.print((char)var10001 + " ");
-            } else {
-               var10001 = var2++;
-               System.out.print((char)var10001 + " ");
-            }
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print18(int var0) {
-      for(int var1 = 0; var1 < var0; ++var1) {
-         int var2 = 64 + (var0 - var1);
-
-         for(int var3 = 0; var3 <= var1; ++var3) {
-            System.out.print((char)(var2++));
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print19(int var0) {
-      for(int var1 = 1; var1 <= 2 * var0; ++var1) {
-         int var2 = var1 <= var0 ? var0 - var1 + 1 : var1 - var0;
-         int var3 = var0 - var2;
-
-         int var4;
-         for(var4 = 0; var4 < var2; ++var4) {
-            System.out.print("*");
-         }
-
-         for(var4 = 0; var4 < 2 * var3; ++var4) {
-            System.out.print(" ");
-         }
-
-         for(var4 = 0; var4 < var2; ++var4) {
-            System.out.print("*");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print20(int var0) {
-      for(int var1 = 1; var1 < 2 * var0; ++var1) {
-         int var2 = var1 <= var0 ? var1 : 2 * var0 - var1;
-         int var3 = var0 - var2;
-
-         int var4;
-         for(var4 = 0; var4 < var2; ++var4) {
-            System.out.print("*");
-         }
-
-         for(var4 = 0; var4 < 2 * var3; ++var4) {
-            System.out.print(" ");
-         }
-
-         for(var4 = 0; var4 < var2; ++var4) {
-            System.out.print("*");
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print21(int var0) {
-      for(int var1 = 0; var1 < var0; ++var1) {
-         for(int var2 = 0; var2 < var0; ++var2) {
-            if (var1 != 0 && var2 != 0 && var1 != var0 - 1 && var2 != var0 - 1) {
-               System.out.print(" ");
-            } else {
-               System.out.print("*");
-            }
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void print22(int var0) {
-      for(int var1 = 0; var1 < 2 * var0 - 1; ++var1) {
-         int var2 = var1;
-         int var3 = 2 * var0 - 2 - var1;
-
-         for(int var4 = 0; var4 < 2 * var0 - 1; ++var4) {
-            int var6 = 2 * var0 - 2 - var4;
-            int var7 = Math.min(Math.min(var4, var6), Math.min(var2, var3));
-            System.out.print(var0 - var7);
-         }
-
-         System.out.println();
-      }
-
-   }
-
-   public static void main(String[] var0) {
-      print22(4);
-   }
+	public static void print4(int n) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print5(int n) {
+		// *****
+		// ****
+		// ***
+		// **
+		// *
+		for (int i = n; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print6(int n) {
+		// 12345
+		// 1234
+		// 123
+		// 12
+		// 1
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n - i + 1; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print7(int n) {
+		// *
+		// ***
+		// *****
+		// *******
+		// *********
+		for (int i = 1; i <= n; i++) {
+			for (int k = 0; k < n - i; k++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <= 2 * i - 1; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print8(int n) {
+		// *********
+		// *******
+		// *****
+		// ***
+		// *
+		for (int i = 1; i <= n; i++) {
+			for (int k = 1; k < i; k++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <= (2 * n) - (2 * i - 1); j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print9(int n) {
+		// *
+		// ***
+		// *****
+		// *******
+		// *********
+		// *********
+		// *******
+		// *****
+		// ***
+		// *
+		print7(n);
+		print8(n);
+	}
+
+	public static void print10(int n) {
+		// *
+		// **
+		// ***
+		// ****
+		// *****
+		// ****
+		// ***
+		// **
+		// *
+
+		for (int i = 1; i <= 2 * n - 1; i++) {
+			if (i <= n) {
+				for (int j = 1; j <= i; j++) {
+					System.out.print(("*"));
+				}
+			} else {
+				for (int j = 1; j <= 2 * n - i; j++) {
+					System.out.print(("*"));
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print11(int n) {
+		// 1
+		// 01
+		// 101
+		// 0101
+		// 10101
+		int start = 1;
+		for (int i = 0; i < n; i++) {
+			if (i % 2 == 0)
+				start = 1;
+			for (int j = 0; j <= i; j++) {
+				System.out.print(start);
+				start = 1 - start;
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print12(int n) {
+		//1         1
+		//12       21
+		//123     321
+		//1234   4321
+		//12345 54321
+		for (int i = 1; i <= n; i++) {
+
+			for (int j = 1; j <= i; j++) {
+				System.out.print(j);
+			}
+			for (int j = 0; j <= 2 * (n - i); j++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j >= 1; j--) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print13(int n) {
+		// 1
+		// 2 3
+		// 4 5 6
+		// 7 8 9 10
+		// 11 12 13 14 15
+		int num = 1;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print(num++ + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print14(int n) {
+		// A
+		// A B
+		// A B C
+		// A B C D
+		// A B C D E
+		for (int i = 0; i < n; i++) {
+			int charr = 65;
+			for (int j = 0; j <= i; j++) {
+				System.out.print((char) charr++ + " ");
+			}
+			// for(char j = 'A'; j <= 'A' +i ;j ++)
+			// System.out.print(j);
+			System.out.println();
+		}
+	}
+
+	public static void print15(int n) {
+		// A B C D E
+		// A B C D
+		// A B C
+		// A B
+		// A
+		for (int i = n; i >= 1; i--) {
+			int charr = 65;
+			for (int j = 0; j < i; j++) {
+				System.out.print((char) charr++ + " ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print16(int n) {
+		// A
+		// B B
+		// C C C
+		// D D D D
+		// E E E E E
+		int charr = 65;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print((char) charr + " ");
+			}
+			charr++;
+			System.out.println();
+		}
+	}
+
+	public static void print17(int n) {
+		//         A
+		//       A B A
+		//     A B C B A
+		//   A B C D C B A
+		// A B C D E D C B A
+		for (int i = 0; i < n; i++) {
+			int charr = 65;
+			for (int j = 0; j < n - i - 1; j++) {
+				System.out.print("  ");
+			}
+			for (int j = 0; j < (2 * i) + 1; j++) {
+				if (j >= i) {
+					System.out.print((char) charr-- + " ");
+				} else {
+					System.out.print((char) charr++ + " ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print18(int n) {
+		// E
+		// DE                     // go for char instead of int like use char = 'A' then
+		// CDE                    // do A +1 or whatever.
+		// BCDE
+		// ABCDE
+		for (int i = 0; i < n; i++) {
+			int charr = 64 + (n - i);
+			for (int j = 0; j <= i; j++) {
+				System.out.print((char) charr++);
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print19(int n) {
+		// **********
+		// ****  ****
+		// ***    ***
+		// **      **
+		// *        *
+		// *        *
+		// **      **
+		// ***    ***
+		// ****  ****
+		// **********
+		for (int i = 1; i <= 2 * n; i++) {
+
+			int star = i <= n ? (n - i + 1) : (i - n);
+			int space = n - star;
+
+			for (int j = 0; j < star; j++) { //star
+				System.out.print("*");
+			}
+			for (int j = 0; j < 2*space; j++) { //space
+				System.out.print(" ");
+			}
+			for (int j = 0; j < star; j++) { //star
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	public static void print20(int n) {	
+		for (int i = 1; i < 2*n; i++) {
+			// *        *
+			// **      **
+			// ***    ***
+			// ****  ****
+			// **********
+			// ****  ****
+			// ***    ***
+			// **      **
+			// *        *
+			int star = i <= n ? i  : (2*n - i);
+			int space = n - star;
+
+			for (int j = 0; j < star; j++) { //star
+				System.out.print("*");
+			}
+			for (int j = 0; j < 2*space; j++) { //space
+				System.out.print(" ");
+			}
+			for (int j = 0; j < star; j++) { //star
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void print21(int n ){
+	// ****
+	// *  *
+	// *  *
+	// ****
+	for(int i = 0 ; i < n;i++){
+		for(int j = 0 ; j < n;j++){
+			if(i == 0 ||  j == 0 || i == n-1 || j == n-1)
+			System.out.print("*");
+			else
+			System.out.print(" ");
+		}
+		System.out.println();
+	}
 }
- 
+	public static void print22(int n) {	
+		for (int i = 0; i < 2*n-1; i++) {
+			for(int j = 0; j < 2*n-1 ; j++){
+				int left = j ,right = (2*n-2) - j, top = i, bottom = (2*n-2) -i;
+				int min = Math.min( Math.min(left ,right), Math.min(top, bottom));
+				System.out.print(n-min);
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		print22(4);
+	}
+}

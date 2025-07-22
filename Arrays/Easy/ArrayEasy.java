@@ -1,17 +1,22 @@
-public class ArrayBasics {
+public class ArrayEasy{
 
-    // Find the largest element in an array
-    static int findLargest(int[] a) {
-        int max = a[0];
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] > max) {
-                max = a[i];
-            }
-        }
-        return max;
-    }
+    // LEFT ROTATE AND ARRAY BY D POSITIONS :
+    //Link : https://leetcode.com/problems/rotate-array/description/
+    //first reverse the first d elements then reverse the rest of the array and finally reverse the whole array
+    //TC : O(N) , SC : O(1)
+    
+    
 
-    // Find Second Smallest and Second Largest Element in an array
+    //MAXIMUM CONSECUTIVE ONES :
+    //link : https://leetcode.com/problems/max-consecutive-ones/
+    // traversing the array and have a counter to count the number of consecutive ones if 1 is found 
+    // increase the counter else reset it to 0 and check if the counter is greater than the max count found so far
+    //TC : O(N) , SC : O(1)
+
+
+
+
+     // Find Second Smallest and Second Largest Element in an array
     static int[] secondSmallLarge(int[] a) {
         int[] res = { -1, -1 };
 
@@ -41,7 +46,6 @@ public class ArrayBasics {
 
     public static void main(String[] args) {
         int[] arr = { 5, 2, 9, 1, 5, 6 };
-        System.out.println(findLargest(arr));
         System.out.println("2nd Min : " + secondSmallLarge(arr)[0] + " , 2nd Max :" + secondSmallLarge(arr)[1]);
     }
 }
