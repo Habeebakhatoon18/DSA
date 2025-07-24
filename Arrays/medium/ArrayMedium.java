@@ -41,6 +41,18 @@ public class ArrayMedium {
     //TC : O(N) , SC : O(1)
     
     //------------------------------------------------------------------------------------------------------
+    //LONGEST CONSECUTIVE SEQUENCE IN AN ARRAY
+    //LINK :https://leetcode.com/problems/longest-consecutive-sequence/
+
+    //Better : sort the array then traverse through tthe array to find the difference to curr elm with
+    //exact next and have a counter and maxcount var
+    //TC :O(N LON N + N) , SC:O(1);
+
+    //OPTIMAL : put all elms in set then check for elm that could be the possible start of sequence(!set.find(elm-1))
+    // then goes on by inc elm by 1 and checking if that exist if so increase count 
+    //since addition and contains in set is o(1) can go to o(n) but that won't happern
+    //TC:O(3N) = O(N) ,SC : O(N);
+
     
     public static void main(String[] args) {  
         
