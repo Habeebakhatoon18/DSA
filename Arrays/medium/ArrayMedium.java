@@ -41,6 +41,18 @@ public class ArrayMedium {
     //TC : O(N) , SC : O(1)
     
     //------------------------------------------------------------------------------------------------------
+    //N/3 Element in an array:
+    //link : https://leetcode.com/problems/majority-element-ii/description/
+    //BETTER : using hashmap to count the frequency of each element and then check if any element has frequency greater than n/3
+    //TC : O(N LOG N) , SC : O(N)
+
+  //OPTIMAL : using Boyer-Moore Voting Algorithm
+    //taking 4 var elm1, elm2 and count1, count2 , if count1 is 0 then set elm1 to current element and increment count1
+    //if count2 is 0 then set elm2 to current element and increment count2
+    // dekhle bahen abhi likhne ka man nahi hai
+    //TC : O(N) , SC : O(1)
+      
+    //------------------------------------------------------------------------------------------------------
     //LONGEST CONSECUTIVE SEQUENCE IN AN ARRAY
     //LINK :https://leetcode.com/problems/longest-consecutive-sequence/
 
