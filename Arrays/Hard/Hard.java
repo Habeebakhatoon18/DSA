@@ -60,7 +60,7 @@ public class Hard{
          System.out.println(val1);
          System.out.println(val2);
          val2 = val2/val1;          //val2(X+y) = val2/(x-y) 
-         val1 = (val1+val2)/2;      //adding both equations : 2x = val1+ val2;
+         val1 = (val1+val2)/2;      //adding both equations : 2x = val1+ val2; since((X-Y)+(X+Y)= VAL1 +VAL2) = 2x = val1 +val2;
          val2 = val2-val1;
          System.out.println("Repeating: "+val2);
          System.out.println("missing: "+ val1);
@@ -68,6 +68,8 @@ public class Hard{
         }
         //TC : O(N) ; SC:O(1);
         //zabardast level ki thinking 
+
+
         public void findRepeatingAndMissingUsingXor(int[] arr){
              int n = arr.length;
              int xor = 0;
@@ -78,6 +80,12 @@ public class Hard{
              int one = 0, zero = 0;
              //finding differentitating factor in bits right most bit who is 1 
             int num = (xor & ~(xor - 1));
+
+            //2 groups will be there 1 whose xth bit will be 0 and other whose xth bit will be 1
+            //if (from given arr)3 is member of any group then other 3(from 1-N) will be member of same group
+            //so they will cancel out each other
+            //in both groups 1 member will be trice (repeating ) and in another group 1 member will be once
+            //(missing one);
             for(int i = 0;i <n;i++){
                 //1s group 
                 if((arr[i] & num) != 0)
@@ -93,7 +101,7 @@ public class Hard{
                 zero ^= i;
             }
             //additional check
-            int c = 0
+            int c = 0;
             for(int i : arr){
             if(zero == i)
             c++;
